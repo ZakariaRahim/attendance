@@ -1,17 +1,9 @@
 
 import 'package:flutter/material.dart';
 
-class Dash extends StatelessWidget {
-  static const String id='dash';
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Mydash(),
-    );
-  }
-}
 
 class Mydash extends StatefulWidget {
+  static const String id='dash';
   @override
   _MydashState createState() => _MydashState();
 }
@@ -19,10 +11,12 @@ class Mydash extends StatefulWidget {
 class _MydashState extends State<Mydash> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Container(
+
+    child:  Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        leading: Icon(Icons.dashboard),
+
         title: Text('Dashboard'),
       ),
       body: Container(
@@ -35,9 +29,9 @@ class _MydashState extends State<Mydash> {
             ),
             Row(
               children: [
-              Text('Date shows here',
-                style: TextStyle(fontSize: 20.0),
-              ),
+              // Text('Date shows here',
+              //   style: TextStyle(fontSize: 20.0),
+              // ),
               SizedBox(
                 width: 90.0,
               ),
@@ -87,7 +81,15 @@ class _MydashState extends State<Mydash> {
           ],
         ),
       ),
-    );
+    ),)
+    ;
 
+  }
+}
+
+class _mydate{
+  String date1(){
+    var date=new DateTime.now();
+    return date1();
   }
 }

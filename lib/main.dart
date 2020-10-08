@@ -6,8 +6,8 @@ import 'package:attenndance/registration.dart';
 
 
 
-void main()=>runApp(MyApp());
-class MyApp extends StatelessWidget {
+void main ()=>runApp(MyApp());
+class MyApp extends StatelessWidget  {
   static const String id='main';
   // This widget is the root of your application.
   @override
@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
       // initialRoute:MyApp.id ,
       routes: {
         MyApp.id:(context)=>MyApp(),
-     Dash.id:(context)=>Dash(),
-      RegistrationWidget.id:(context)=> RegistrationWidget(),
+     Mydash.id:(context)=>Mydash(),
+      Registration.id:(context)=> Registration(),
 
 
 
@@ -104,7 +104,7 @@ class _Login extends State<Login> {
             color: Colors.black,
             onPressed: (){
               //do something here. e.g submit User data for login upon clicked
-              Navigator.pushNamed(context, Dash.id);
+              Navigator.pushNamed(context, Mydash.id);
             },
             child: Text('Sign in',
               style: TextStyle(
@@ -128,7 +128,7 @@ class _Login extends State<Login> {
               color: Colors.black,
               onPressed: (){
                 //do something here. e.g route to registration section
-                Navigator.pushNamed(context, RegistrationWidget.id);
+                Navigator.pushNamed(context, Registration.id);
               },
               child: Text('Sign Up',
                 style: TextStyle(
