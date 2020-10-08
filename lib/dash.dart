@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 class Mydash extends StatefulWidget {
   static const String id='dash';
+
   @override
   _MydashState createState() => _MydashState();
 }
@@ -11,6 +12,7 @@ class Mydash extends StatefulWidget {
 class _MydashState extends State<Mydash> {
   @override
   Widget build(BuildContext context) {
+
     return Container(
 
     child:  Scaffold(
@@ -27,23 +29,28 @@ class _MydashState extends State<Mydash> {
             SizedBox(
               height: 20.0,
             ),
-            Row(
-              children: [
-              // Text('Date shows here',
-              //   style: TextStyle(fontSize: 20.0),
-              // ),
-              SizedBox(
-                width: 90.0,
+            Text('Date: ${now.day} / ${now.month} / ${now.year}',
+              style: TextStyle(fontSize: 30.0,
+                  fontWeight: FontWeight.bold
               ),
-              Text('time shows here',
-                style: TextStyle(fontSize: 20.0),),
-            ],
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Text('Time:  ${now.hour}: ${now.minute}: ${now.second}',
+              style: TextStyle(fontSize: 30.0,
+               fontWeight: FontWeight.bold
+              ),
             ),
               SizedBox(
                 height: 10.0,
             ),
-            Text('Location and coordinates shows here',
-              style: TextStyle(fontSize: 20.0),),
+            Text('Forestry',
+                // Location shows here
+              style: TextStyle(fontSize: 30.0,
+                  fontWeight: FontWeight.bold
+              ),
+            ),
 
             SizedBox(
               height: 10.0,
@@ -81,15 +88,12 @@ class _MydashState extends State<Mydash> {
           ],
         ),
       ),
-    ),)
-    ;
+    ),
+    );
 
   }
+  DateTime now=new DateTime.now();
+
+
 }
 
-class _mydate{
-  String date1(){
-    var date=new DateTime.now();
-    return date1();
-  }
-}
